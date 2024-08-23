@@ -1,5 +1,5 @@
-from django.shortcuts import render, get_object_or_404
-from django.views import generic
+from django.shortcuts import render
+from .models import About
 ##from .models import Post
 
 
@@ -10,9 +10,11 @@ def about(request):
     about Gaurav Jagpal
     """
     
+    about = About.objects.all().order_by('-updated_on').first()
+
     return render(
         request,
         "about/about.html",
-        {"about": about}
+        {"about": about},
     )
 
