@@ -10,7 +10,7 @@ class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1)
     template_name = "blog/index.html"
-    paginate_by = 12
+    paginate_by = 18
 
 def post_detail(request, slug):
     """

@@ -164,3 +164,7 @@ body {
 #about-image {
     max-width: 100%;
 }
+
+.profile-image {
+    width: 75%;
+}
